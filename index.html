@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUDHI 2.0 | Smart Washroom System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>SHUDHI <span>2.0</span></h2>
+            <p>SMART HYGIENE. SMARTER FUTURE.</p>
+        </div>
+
+        <nav>
+            <a href="#dashboard">🏠 Dashboard</a>
+            <a href="#sensors">📡 Sensors</a>
+            <a href="#automation">⚙️ Automation</a>
+            <a href="#robot">🤖 Cleaning Robot</a>
+            <a href="#reports">📝 Report Problem</a>
+            <a href="#alerts">🔔 Alerts</a>
+            <a href="#history">📋 History</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>SHUDHI 2.0</p>
+            <small>Smart Washroom System</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Smart Washroom Dashboard</h2>
+                <p>Monitor. Automate. Maintain Hygiene.</p>
+            </div>
+            <div class="live-status">● SYSTEM ONLINE</div>
+        </header>
+
+        <section id="dashboard" class="section">
+            <div class="welcome-banner">
+                <div>
+                    <h1>Welcome to SHUDHI 2.0 💗</h1>
+                    <p>Intelligent monitoring and automated washroom cleaning.</p>
+                </div>
+                <div class="welcome-icon">🤖</div>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <p>Overall Condition</p>
+                    <h2 id="overall">GOOD</h2>
+                </div>
+                <div class="summary-card">
+                    <p>Active Alerts</p>
+                    <h2 id="alertCount">0</h2>
+                </div>
+                <div class="summary-card">
+                    <p>Monitoring Sensors</p>
+                    <h2>05</h2>
+                </div>
+                <div class="summary-card">
+                    <p>Cleaning Robot</p>
+                    <h2 id="robotSummary">IDLE</h2>
+                    <small id="robotSummaryText">Waiting for task</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="sensors" class="section">
+            <h2 class="section-title">📡 Sensor Monitoring</h2>
+
+            <div class="sensor-grid">
+                <div class="sensor-card">
+                    <h3>💧 Water Level</h3>
+                    <h2 id="waterValue">80%</h2>
+                    <p id="waterStatus">Normal</p>
+                </div>
+
+                <div class="sensor-card">
+                    <h3>🧹 Floor Condition</h3>
+                    <h2 id="floorValue">DRY</h2>
+                    <p id="floorStatus">No wet area</p>
+                </div>
+
+                <div class="sensor-card">
+                    <h3>🗑️ Dustbin Level</h3>
+                    <h2 id="dustbinValue">30%</h2>
+                    <p id="dustbinStatus">Normal</p>
+                </div>
+
+                <div class="sensor-card">
+                    <h3>🌬️ Air Quality</h3>
+                    <h2 id="airValue">50</h2>
+                    <p id="airStatus">Good air quality</p>
+                </div>
+
+                <div class="sensor-card">
+                    <h3>🧴 Soap Level</h3>
+                    <h2 id="soapValue">80%</h2>
+                    <p id="soapStatus">Available</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="automation" class="section">
+            <h2 class="section-title">⚙️ Smart Automation</h2>
+
+            <div class="automation-grid">
+                <div class="automation-card">
+                    <h3>🌬️ Smart Ventilation</h3>
+                    <p id="fanDescription">Air quality is normal.</p>
+                    <strong id="fanStatus">VENTILATION OFF</strong>
+                </div>
+
+                <div class="automation-card">
+                    <h3>💧 Water Management</h3>
+                    <p id="waterControlDescription">Water supply is normal.</p>
+                    <strong id="waterControlStatus">NORMAL</strong>
+                </div>
+
+                <div class="automation-card">
+                    <h3>🤖 Automatic Floor Cleaning</h3>
+                    <p id="cleaningDescription">Floor is clean.</p>
+                    <strong id="cleaningStatus">STANDBY</strong>
+                </div>
+
+                <div class="automation-card">
+                    <h3>📲 Staff Notification</h3>
+                    <p id="notificationDescription">No new notifications.</p>
+                    <strong id="notificationStatus">READY</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="robot" class="section">
+            <h2 class="section-title">🤖 SHUDHI Cleaning Robot</h2>
+            <p class="section-subtitle">Autonomous floor cleaning and battery management</p>
+
+            <div class="robot-panel">
+
+                <div class="robot-info">
+                    <h3>Robot Status</h3>
+                    <h2 id="robotStatus">IDLE</h2>
+                    <p id="robotMessage">Waiting for a cleaning task.</p>
+
+                    <h3>Selected Task</h3>
+                    <p id="robotTask">No task assigned</p>
+
+                    <div class="battery-panel">
+                        <h3>🔋 Battery Level</h3>
+                        <div class="battery-heading">
+                            <span id="batteryText">100%</span>
+                            <span id="chargingStatus">Fully Charged</span>
+                        </div>
+                        <div class="battery-track">
+                            <div id="batteryFill"></div>
+                        </div>
+                    </div>
+
+                    <div class="robot-progress-container">
+                        <div class="progress-heading">
+                            <span>Cleaning Progress</span>
+                            <span id="robotProgressText">0%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div id="robotProgress" class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="robot-buttons">
+                        <button id="startRobotBtn">▶ Start Cleaning</button>
+                        <button id="stopRobotBtn">■ Stop Robot</button>
+                    </div>
+                </div>
+
+                <div class="robot-scene">
+                    <div class="scene-label">LIVE FLOOR SIMULATION</div>
+
+                    <div id="robotFloor" class="robot-floor">
+                        <div class="floor-tile"></div>
+                        <div class="floor-tile"></div>
+                        <div class="floor-tile"></div>
+                        <div class="floor-tile"></div>
+
+                        <div id="dustPatch" class="dirt-patch">🟤</div>
+                        <div id="wetPatch" class="wet-patch">💧</div>
+
+                        <div id="chargingStation" class="charging-station">
+                            <span>🔋</span>
+                            <small>DOCK</small>
+                        </div>
+
+                        <div id="robotModel" class="robot-model">
+                            <div class="robot-top">SHUDHI</div>
+                            <div class="robot-eye"></div>
+                            <div class="robot-wheel left-wheel"></div>
+                            <div class="robot-wheel right-wheel"></div>
+                            <div class="robot-cleaner"></div>
+                        </div>
+                    </div>
+
+                    <div class="floor-legend">
+                        <span>🟤 Dust / Dirt</span>
+                        <span>💧 Wet Area</span>
+                        <span>✨ Clean Floor</span>
+                        <span>🔋 Charging Station</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reports" class="section">
+            <h2 class="section-title">📝 Report a Problem</h2>
+
+            <form id="reportForm" class="report-form">
+                <label for="problemType">Problem Type</label>
+                <select id="problemType" required>
+                    <option value="">Select a problem</option>
+                    <option value="Wet Floor">Wet Floor</option>
+                    <option value="Dusty Floor">Dusty Floor</option>
+                    <option value="Water Leakage">Water Leakage</option>
+                    <option value="Empty Soap">Empty Soap Dispenser</option>
+                    <option value="Dustbin Full">Dustbin Full</option>
+                    <option value="Bad Air Quality">Bad Air Quality</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="reportDescription">Description</label>
+                <textarea id="reportDescription" placeholder="Describe the problem..." required></textarea>
+
+                <button type="submit">Submit Report</button>
+                <p id="reportMessage"></p>
+            </form>
+        </section>
+
+        <section id="alerts" class="section">
+            <h2 class="section-title">🔔 Alerts & Notifications</h2>
+            <div id="alertList" class="alert-list">
+                <p>No active alerts.</p>
+            </div>
+        </section>
+
+        <section id="history" class="section">
+            <h2 class="section-title">📋 Maintenance History</h2>
+            <div class="history-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyList"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="simulation" class="section">
+            <h2 class="section-title">🧪 Simulation Controls</h2>
+            <p>Choose a scenario to test SHUDHI 2.0.</p>
+
+            <div class="simulation-buttons">
+                <button onclick="setScenario('normal')">Normal Condition</button>
+                <button onclick="setScenario('poor')">Poor Hygiene</button>
+                <button onclick="setScenario('water')">Low Water</button>
+                <button onclick="setScenario('dust')">Dusty Floor</button>
+                <button onclick="setScenario('wet')">Wet Floor</button>
+                <button onclick="setScenario('reset')">Reset Simulation</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>SHUDHI 2.0 | SMART HYGIENE. SMARTER FUTURE.</p>
+            <small>Educational software simulation — readings and actions are simulated.</small>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
